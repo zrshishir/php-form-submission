@@ -10,10 +10,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         echo json_encode($validity);
     }else{
         $buyer = new Buyer();
-        if (isset($_COOKIE['buyer_creation'])) {
-            unset($_COOKIE['buyer_creation']);
-            setcookie('buyer_creation', '', time() - 3600, '/'); // empty value and old timestamp
-        }
+        //for testing purposes
+//        if (isset($_COOKIE['buyer_creation'])) {
+//            unset($_COOKIE['buyer_creation']);
+//            setcookie('buyer_creation', '', time() - 3600, '/'); // empty value and old timestamp
+//        }
 
         if($_COOKIE['buyer_creation'] != 110105){
             $buyerId = $buyer->create($_POST);
