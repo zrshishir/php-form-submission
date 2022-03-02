@@ -83,14 +83,25 @@ Main Page
    ![Main page](/view/image/image-1.png)
 
 Receipt Submission Formm
-   ![Submission form](/view/image/image-4.png
+   ![Submission form](/view/image/image-4.png)
 
-![Searching form](/view/image/image-3.png),
-![Cookie Validation](/view/image/image-2.png),
-![Form Validation](/view/image/image-6.png),
-![Form Validation](/view/image/image-7.png),
-![Form Validation](/view/image/image-8.png),
-![Form Validation](/view/image/image-5.png)
+Searching Form
+   ![Searching form](/view/image/image-3.png)
+
+Cookie Validation
+   ![Cookie Validation](/view/image/image-2.png)
+
+Form Validation Part1
+   ![Form Validation](/view/image/image-6.png)
+
+Form Validation Part2
+   ![Form Validation](/view/image/image-7.png)
+
+Form Part3
+   ![Form Validation](/view/image/image-8.png),
+
+Form Part4
+   ![Form Validation](/view/image/image-5.png)
 
 #### NB: If you face any issue, please inform me. 
 
