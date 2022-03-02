@@ -79,8 +79,12 @@ The installation is pretty simple. There is nothing like composer update. You wi
 9. Create a simple report page where users can see all the submissions and filter it by date range and/ or user id.
 
 #### Screenshots
-![Main page](/view/image/image-1.png), 
-![Submission form](/view/image/image-4.png), 
+Main Page
+   ![Main page](/view/image/image-1.png)
+
+Receipt Submission Formm
+   ![Submission form](/view/image/image-4.png
+
 ![Searching form](/view/image/image-3.png),
 ![Cookie Validation](/view/image/image-2.png),
 ![Form Validation](/view/image/image-6.png),
