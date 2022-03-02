@@ -24,12 +24,12 @@ class Validation {
         $message = "";
         $message .= (empty($data['from_date'])) ? "from date should not be null. " : "" ;
         $message .= (empty($data['to_date'])) ? "to date should not be null. " : "" ;
-        $message .= (empty($data['entry_by'])) ? "to date should not be null. " : "" ;
+        $message .= (empty($data['entry_by'])) ? "User ID should not be null. " : "" ;
 
-        if(empty($message)){
-            return ['resp_code' => 0, 'code'=> 422, 'message' => 'ok'];
-        }else{
+        if($message == ""){
             return ['resp_code' => 1, 'code'=> 200, 'message' => $message];
+        }else{
+            return ['resp_code' => 0, 'code'=> 422, 'message' => $message];
         }
     }
 }

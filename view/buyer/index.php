@@ -26,14 +26,6 @@
                             <input type="date" name="to_date" id="to_date" class="demoInputBox">
 
                             <input type="submit" name="search" id="btnSearch" value="Search" class="btn btn-primary" />
-
-                        <div id="validity-message">
-                            <?php
-                            if(isset($validity['resp_code']) && $validity['resp_code'] == 1){
-                                echo $validity['message'] . "<br/>";
-                            }
-                            ?>
-                        </div>
                     </form>
                 </div>
             </div>

@@ -14,16 +14,38 @@ class Buyer {
     }
 
     public function search($data){
-        $query = "SELECT * FROM buyers WHERE entry_at >= ? AND entry_at <= ? AND entry_by = ?";
-        $paramType = "ssi";
-        $paramValue = array(
-            $data['from_date'],
-            $data['to_date'],
-            $data['entry_by']
-        );
-        
-        $result = $this->dbHandle->searchQuery($query, $paramType, $paramValue);
-        return $result;
+        if (isset($data['entry_by']) && isset($data['from_date']) && isset($data['from_date'])) {
+            $query = "SELECT * FROM buyers WHERE entry_by = ? OR entry_at >= ? AND entry_at <= ?";
+            $paramType = "iss";
+            $paramValue = array(
+                $data['entry_by'],
+                $data['from_date'],
+                $data['to_date']
+            );
+
+            $result = $this->dbHandle->searchQuery($query, $paramType, $paramValue);
+            return $result;
+        } elseif (isset($data['entry_by'])) {
+            $query = "SELECT * FROM buyers WHERE entry_by = ? ";
+            $paramType = "i";
+            $paramValue = array(
+                $data['entry_by']
+            );
+
+            $result = $this->dbHandle->searchQuery($query, $paramType, $paramValue);
+            return $result;
+        } else {
+            $query = "SELECT * FROM buyers WHERE entry_at >= ? OR entry_at <= ?";
+            $paramType = "ss";
+            $paramValue = array(
+                $data['from_date'],
+                $data['to_date']
+            );
+
+            $result = $this->dbHandle->searchQuery($query, $paramType, $paramValue);
+            return $result;
+        }
+
     }
 
     public function create($data){

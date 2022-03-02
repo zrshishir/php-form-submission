@@ -44,9 +44,7 @@ switch($action){
             if(isset($_GET['search'])){
                 $validation = new Validation();
                 $validity = $validation->searchValidator($_GET);
-                if($validity['resp_code'] == 0){
-                    $result = $buyer->search($_GET);
-                }
+                $result = $buyer->search($_GET);
             }else{
                 $result = $buyer->index();
             }
